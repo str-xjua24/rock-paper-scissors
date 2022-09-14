@@ -10,44 +10,44 @@ function playRound(playerSelection, computerSelection) {
   switch(playerSelection) {
     case "rock":
       if (computerChoice == "scissors") {
-        console.log("Rock beats scissors. You win.");
+        alert("Rock beats scissors. You win.");
         playerScore++;
       } else if (computerChoice == "paper") {
-        console.log("Paper beats rock. You lose.");
+        alert("Paper beats rock. You lose.");
         computerScore++;
       } else {
-        console.log("Tie");
+        alert("Tie");
       }
       break;
     case "paper":
       if (computerChoice == "rock") {
-        console.log("Paper beats rock. You win.");
+        alert("Paper beats rock. You win.");
         playerScore++;
       } else if (computerChoice == "scissors") {
-        console.log("Scissors beats paper. You lose.");
+        alert("Scissors beats paper. You lose.");
         computerScore++;
       } else {
-        console.log("Tie");
+        alert("Tie");
       }
       break;
     case "scissors":
       if (computerChoice == "paper") {
-        console.log("Scissors beats paper. You win.");
+        alert("Scissors beats paper. You win.");
         playerScore++;
       } else if (computerChoice == "rock") {
-        console.log("Rock beats scissors. You lose.");
+        alert("Rock beats scissors. You lose.");
         computerScore++;
       } else {
-        console.log("Tie");
+        alert("Tie");
       }
       break;
     default:
-      console.log("String error");
+      alert("String error");
   }
 }
 
 function game() {
-  while (playerScore != 5 || computerScore != 5) {
+  while (playerScore < 5 && computerScore < 5) {
     alert(`Player Score: ${playerScore} | Computer Score: ${computerScore}`);
     playerInput = prompt("Enter rock, paper, or scissors:");
     userChoice = playerInput.toLowerCase();
